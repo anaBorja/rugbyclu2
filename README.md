@@ -54,6 +54,11 @@ Se han definido entidades para mejorar la precisión del modelo.
 
 ## 🔧 Instalación y Configuración
 
+ Clona este repositorio
+```bash
+git clone https://github.com/anaBorja/rugbyclu2.git
+```
+
 Si clonas este repositorio, debes crear un archivo **`.env`** en la raíz con las credenciales de los recursos de Azure. Este archivo debe contener:
 
 ```plaintext
