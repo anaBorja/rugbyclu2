@@ -108,6 +108,8 @@ def get_qualification_info():
 
 
 def get_host_city_info(city):
+    if not city:
+        return "Debes especificar una ciudad anfitriona." 
     city_info = {
         "Sídney": "Sídney albergará la final y varios partidos en el Accor Stadium.",
         "Melbourne": "Melbourne tendrá partidos en el AAMI Park.",

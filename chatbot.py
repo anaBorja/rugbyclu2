@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.language.conversations import ConversationAnalysisClient
-from rugbyclu import get_tourism_info, get_qualification_info, get_host_city_info, get_news, get_team_info
+from rugbyclu import get_tourism_info, get_qualification_info, get_host_city_info, get_news, get_team_info, normalize_city_name
 
 # Cargar variables de entorno
 load_dotenv()
@@ -14,6 +14,57 @@ ls_prediction_key = os.getenv('LS_CONVERSATIONS_KEY')
 # Crear cliente de Azure Language Service
 client = ConversationAnalysisClient(
     ls_prediction_endpoint, AzureKeyCredential(ls_prediction_key))
+
+# Columna derecha con sugerencias de preguntas
+st.sidebar.header("Ejemplos de preguntas")
+
+# Agregar las preguntas dentro de cajitas de colores
+st.sidebar.markdown("""
+<div style="background-color: #ff5722; padding: 10px; margin-bottom: 10px; border-radius: 5px; color: white; font-weight: bold;">
+   <ul> 
+        <li>¿Cómo se clasifican los equipos para la Rugby World Cup 2027?  </li>
+        <li>¿Cuáles son los criterios de clasificación para el Mundial de Rugby 2027? </li>                      
+        <li>¿Cuántos equipos participan en el torneo y cómo se definen? </li>
+        <li>¿Cómo afectan las eliminatorias al ranking mundial de rugby?</li>      
+    </ul>
+</div>
+<div style="background-color: #e67e22; padding: 10px; margin-bottom: 10px; border-radius: 5px; color: white; font-weight: bold;">
+   <ul> 
+        <li>¿Cuál es la sede principal del torneo?</li>
+        <li>¿Cuáles son las ciudades sede de la Rugby World Cup 2027?</li>                      
+        <li>¿Cuántos estadios se usarán en la Copa del Mundo de Rugby?</li>
+        <li>¿Se podrá asistir a los partidos en todas las sedes?</li>      
+    </ul>
+</div>
+<div style="background-color: #e59866 ; padding: 10px; margin-bottom: 10px; border-radius: 5px; color: white; font-weight: bold;">
+   <ul> 
+        <li>¿Dónde comer en Melbourne?</li>
+        <li>¿Hay tours guiados en Townsville?</li>                      
+        <li>¿Cuántos estadios se usarán en la Copa del Mundo de Rugby?</li>
+        <li>¿Dónde puedo ver vida silvestre en Adelaida?</li>
+        <li> ¿Cuáles son los mejores parques de Brisbane?</li>
+        <li>Lugares históricos para conocer en Perth.</li>                      
+        <li>Lugares turísticos recomendados en Sídney. </li>       
+    </ul>
+</div>
+<div style="background-color: #f0b27a; padding: 10px; margin-bottom: 10px; border-radius: 5px; color: white; font-weight: bold;">
+   <ul>
+        <li>¿Dónde comer en Melbourne?</li>
+        <li>¿Quiénes son los jugadores clave de Nueva Zelanda? </li>                      
+        <li>¿Cuántos puntos tiene Italia en la clasificación? </li>
+        <li>¿En qué grupo está Sudáfrica? </li> 
+    </ul>   
+</div>
+<div style="background-color: #f5b041; padding: 10px; margin-bottom: 10px; border-radius: 5px; color: white; font-weight: bold;">
+     <ul> 
+        <li>¿Los All Blacks ya están clasificados para el torneo? </li>
+        <li>¿Qué torneos dan plazas para la Copa del Mundo? </li>                      
+        <li>informacion sobre el quipo de red roses </li>
+        <li>¿Cuáles son los criterios para clasificar a la Rugby World Cup? </li>      
+    </ul>
+</div>
+""", unsafe_allow_html=True)
+
 
 # Configuración de la app Streamlit
 st.title("Chatbot Rugby World Cup 2027")
@@ -96,7 +147,9 @@ if st.button("Enviar consulta") and userText:
     elif top_intent == 'Clasificación al Mundial':
         st.write(get_qualification_info())
     elif top_intent == 'Ciudades Anfitrionas':
-        st.write(get_host_city_info())
+        city = next((entity["text"] for entity in entities if entity["category"] == "ciudades"), None)
+        city = normalize_city_name(city) if city else None
+        st.write(get_host_city_info(city))
     elif top_intent == 'Equipos Participantes':
         st.write(get_team_info(entities))
     elif top_intent == 'Noticias':
