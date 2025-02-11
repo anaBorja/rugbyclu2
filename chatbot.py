@@ -101,6 +101,7 @@ if st.button("Enviar consulta") and userText:
     confidence = result["result"]["prediction"]["intents"][0]["confidenceScore"]
     intents = result["result"]["prediction"]["intents"]
     entities = result["result"]["prediction"]["entities"]
+    regex_expressions = result["result"]["prediction"].get("regexEntities", []) 
 
     # Construir JSON de salida
     response_json = {
@@ -120,14 +121,40 @@ if st.button("Enviar consulta") and userText:
                     "text": entity["text"],
                     "confidenceScore": entity["confidenceScore"]
                 } for entity in entities
-            ]
+            ],
+            "regexExpressions": [
+            {
+                "regexKey": regex["regexKey"],
+                "pattern": regex["regexPattern"],
+                "language": regex["language"]
+            } for regex in regex_expressions
+        ]
         }
     }
     
+
+    # Obtener expresiones regulares desde extraInformation en entidades
+    regex_expressions = []
+    for entity in entities:
+        if "extraInformation" in entity:
+            for extra in entity["extraInformation"]:
+                if extra["extraInformationKind"] == "RegexKey":
+                    regex_expressions.append({
+                        "regexKey": extra["key"],
+                        "regexPattern": extra["regexPattern"],
+                        "category": entity["category"],
+                        "text": entity["text"],
+                        "confidenceScore": entity["confidenceScore"]
+                    })
+
     # Mostrar el JSON completo en una caja
-    st.subheader("Respuesta en JSON")
-    st.json(response_json)
+    #st.subheader("Respuesta en JSON")
+    #st.json(response_json)
     
+    # Imprimir JSON completo para depuración
+    st.subheader("🔍 JSON Completo de Azure CLU")
+    st.json(result)  # Esto nos permitirá ver la estructura real del JSON
+
     # Mostrar entidades detectadas
     st.subheader("Entidades Detectadas")
     if entities:
@@ -136,6 +163,14 @@ if st.button("Enviar consulta") and userText:
     else:
         st.write("No se detectaron entidades en la consulta.")
     
+   # Mostrar expresiones regulares detectadas en la interfaz
+    st.subheader("Expresiones Regulares Detectadas")
+    if regex_expressions:
+        for regex in regex_expressions:
+            st.write(f"- **{regex['regexKey']}**: {regex['regexPattern']} (Confianza: {regex['confidenceScore']:.2f}) - Texto detectado: {regex['text']}")
+    else:
+        st.write("No se detectaron expresiones regulares en la consulta.")
+  
     # Mostrar información relevante según el intent detectado
     st.subheader("Información Adicional")
     if top_intent == 'Turismo en la Mundial':

@@ -51,7 +51,7 @@ def main():
             confidence = result["result"]["prediction"]["intents"][0]["confidenceScore"]
             intents = result["result"]["prediction"]["intents"]
             entities = result["result"]["prediction"]["entities"]
-            
+            regex_expressions = result["result"]["prediction"].get("regex", {}).get("expressions", [])
             # Construir JSON de salida
             response_json = {
                 "query": userText,
@@ -70,18 +70,52 @@ def main():
                             "text": entity["text"],
                             "confidenceScore": entity["confidenceScore"]
                         } for entity in entities
+                    ],
+                    "regexExpressions": [
+                        {
+                            "regexKey": regex["regexKey"],
+                            "pattern": regex["regexPattern"],
+                            "language": regex["language"]
+                        } for regex in regex_expressions
                     ]
                 }
             }
+
+            # Obtener expresiones regulares desde extraInformation en entidades
+            regex_expressions = []
+            for entity in entities:
+                if "extraInformation" in entity:
+                    for extra in entity["extraInformation"]:
+                        if extra["extraInformationKind"] == "RegexKey":
+                            regex_expressions.append({
+                                "regexKey": extra["key"],
+                                "regexPattern": extra["regexPattern"],
+                                "category": entity["category"],
+                                "text": entity["text"],
+                                "confidenceScore": entity["confidenceScore"]
+                            })
+
 
             # Imprimir JSON formateado
             print("\n📜 **Respuesta en JSON:**\n")
             print(json.dumps(response_json, indent=4, ensure_ascii=False))
 
+            print("\n📜 **JSON COMPLETO RECIBIDO DE AZURE CLU:**\n")
+            print(json.dumps(result, indent=4, ensure_ascii=False))
+
             if entities:
                 print("\U0001F4A1 Entidades Detectadas:")
                 for entity in entities:
                     print("  - {}: {} (Confianza: {})".format(entity["category"], entity["text"], entity["confidenceScore"]))
+
+            # Mostrar expresiones regulares detectadas en la terminal
+            # Mostrar expresiones regulares detectadas en la terminal
+            if regex_expressions:
+                print("\n🔹 Expresiones Regulares Detectadas:")
+                for regex in regex_expressions:
+                    print(f"  - {regex['regexKey']}: {regex['regexPattern']} (Confianza: {regex['confidenceScore']:.2f}) - Texto detectado: {regex['text']}")
+            else:
+                print("\n❌ No se detectaron expresiones regulares en la consulta.")
 
             # Ejecutar lógica según el intent detectado
             if top_intent == 'Clasificacion al Mundial':
@@ -170,6 +204,7 @@ def normalize_city_name(city):
         "pertth": "Perth"  # Corrige errores tipográficos comunes
     }
     return city_variants.get(city.lower(), city)
+
 
 if __name__ == "__main__":
     main()
