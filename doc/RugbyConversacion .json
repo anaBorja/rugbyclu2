@@ -1,0 +1,1371 @@
+{
+    "projectFileVersion": "2022-10-01-preview",
+    "stringIndexType": "Utf16CodeUnit",
+    "metadata": {
+        "projectKind": "Conversation",
+        "settings": {
+            "confidenceThreshold": 0,
+            "normalizeCasing": false,
+            "augmentDiacritics": false
+        },
+        "projectName": "RugbyConversacion",
+        "multilingual": true,
+        "description": "hablar de la mundial de rugby 2027 y poner inscribirse",
+        "language": "es"
+    },
+    "assets": {
+        "projectKind": "Conversation",
+        "intents": [
+            {
+                "category": "None"
+            },
+            {
+                "category": "Clasificación al Mundial"
+            },
+            {
+                "category": "Ciudades Anfitrionas"
+            },
+            {
+                "category": "Turismo en la Mundial"
+            },
+            {
+                "category": "Equipos Participantes"
+            }
+        ],
+        "entities": [
+            {
+                "category": "Proceso de clasificacón",
+                "compositionSetting": "combineComponents",
+                "list": {
+                    "sublists": [
+                        {
+                            "listKey": "McDonald Jones Stadium",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "McDonald Jones Stadium",
+                                        "Estadio McDonald Jones",
+                                        "Newcastle Stadium",
+                                        "Jones Arena"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Queensland Country Bank Stadium",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Queensland Country Bank Stadium",
+                                        "Estadio de Townsville",
+                                        "Townsville Stadium",
+                                        "Queensland Stadium"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Adelaide Oval",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Adelaide Oval",
+                                        "Estadio de Adelaide",
+                                        "Adelaide Stadium",
+                                        "Adelaide Arena"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Optus Stadium",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Optus Stadium",
+                                        "Estadio Optus",
+                                        "Perth Stadium",
+                                        "Optus Arena"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Suncorp Stadium",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Suncorp Stadium",
+                                        "Estadio Suncorp",
+                                        "Brisbane Stadium",
+                                        "Estadio de Brisbane"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "AAMI Park",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "AAMI Park",
+                                        "Estadio AAMI",
+                                        "Melbourne Stadium",
+                                        "Parque AAMI"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Accor Stadium",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Accor Stadium",
+                                        "ANZ Stadium",
+                                        "Estadio de Sídney",
+                                        "Sídney Stadium"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Wild Card",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Wild Card",
+                                        "Invitación especial",
+                                        "pase directo",
+                                        "selección automática",
+                                        "cupo especial"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Torneos Regionales",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Torneos Regionales",
+                                        "Eliminatorias",
+                                        "clasificatorios",
+                                        "torneos de selección",
+                                        "torneos de calificación"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Ranking de World Rugby",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Ranking de World Rugby",
+                                        "Ranking mundial",
+                                        "clasificación WR",
+                                        "tabla de posiciones",
+                                        "clasificación global"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Nwecastle",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Nwecastle",
+                                        "Ciudad de Newcastle",
+                                        "Newcastle 2027",
+                                        "Sede en Newcastle"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Townsville",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Townsville",
+                                        "Ciudad de Townsville",
+                                        "Townsville 2027",
+                                        "Sede en Townsville"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Adelaide ",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Adelaide",
+                                        "Ciudad de Adelaide",
+                                        "Adelaide 2027",
+                                        "Sede en Adelaide"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Perth",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Perth",
+                                        "Ciudad de Perth",
+                                        "Perth 2027",
+                                        "Sede en Perth"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Brisbane",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Brisbane",
+                                        "Bris",
+                                        "Ciudad de Brisbane",
+                                        "Brisbane 2027",
+                                        "Sede en Brisbane"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Melbourne",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Melbourne",
+                                        "Melb",
+                                        "Ciudad de Melbourne",
+                                        "Melbourne 2027",
+                                        "Sede en Melbourne"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Sídney",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Sídney",
+                                        "Sydney",
+                                        "Cuidad de Sídney",
+                                        "Sidney 2027",
+                                        "Sede en Sidney"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "regex": {
+                    "expressions": [
+                        {
+                            "regexKey": "Nombre del Estadio",
+                            "language": "es",
+                            "regexPattern": "(Accor Stadium|AAMI Park|Suncorp Stadium|Optus Stadium|Adelaide Oval|GIO Stadium|McDonald Jones Stadium)"
+                        },
+                        {
+                            "regexKey": "Fecha del partido",
+                            "language": "es",
+                            "regexPattern": "(0?[1-9]|[12][0-9]|3[01])\\\\s(de)\\\\s(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\\\\s(de)\\\\s(2027)"
+                        }
+                    ]
+                },
+                "requiredComponents": [
+                    "list"
+                ]
+            },
+            {
+                "category": "ciudades",
+                "compositionSetting": "combineComponents",
+                "list": {
+                    "sublists": [
+                        {
+                            "listKey": "Newcastle",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Newcastle",
+                                        "Ciudad costera",
+                                        "capital de Hunter",
+                                        "Newy"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Townsville",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Townsville",
+                                        "Ciudad del norte",
+                                        "ciudad tropical"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Adelaida",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Adelaida",
+                                        "Adelaide",
+                                        "ciudad de festivales",
+                                        "capital de Australia Meridional"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Perth",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Perth",
+                                        "Ciudad de la costa oeste",
+                                        "capital de Australia Occidental"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Brisbane",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Brisbane",
+                                        "Bris",
+                                        "ciudad soleada",
+                                        "capital de Queensland"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Melbourne",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Melbourne",
+                                        "Mel",
+                                        "ciudad cultural",
+                                        "capital de Victoria"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Sídney",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Sídney",
+                                        "Sydney",
+                                        "capital de Nueva Gales del Sur"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "prebuilts": [
+                    {
+                        "category": "Geography.Location"
+                    }
+                ],
+                "regex": {
+                    "expressions": [
+                        {
+                            "regexKey": "ciudad",
+                            "language": "es",
+                            "regexPattern": "(Sídney|Sydney|Melbourne|Brisbane|Perth|Adelaida|Townsville|Newcastle|Newy)"
+                        }
+                    ]
+                }
+            },
+            {
+                "category": "lugares turisticos",
+                "compositionSetting": "combineComponents",
+                "list": {
+                    "sublists": [
+                        {
+                            "listKey": "zoologico",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "zoologico",
+                                        "Safari",
+                                        "reserva de animales"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Parque",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Parque",
+                                        "Jardín",
+                                        "reserva natural",
+                                        "área verde"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Tour guiado",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Tour guiado",
+                                        "Excursión",
+                                        "recorrido turístico",
+                                        "visita guiada"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Restaurante",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Restaurante",
+                                        "Lugar para comer",
+                                        "bar"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "museo",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "museo",
+                                        "Galería",
+                                        "exposición",
+                                        "centro cultural"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "playa",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "playa",
+                                        "Costa",
+                                        "balneario",
+                                        "arena",
+                                        "mar"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "regex": {
+                    "expressions": [
+                        {
+                            "regexKey": "lugares",
+                            "language": "es",
+                            "regexPattern": "(playa|costa|balneario|museo|galería|exposición|restaurante|bar|tour guiado|excursión|parque|jardín|zoológico|safari)"
+                        }
+                    ]
+                }
+            },
+            {
+                "category": "equipos de rugby",
+                "compositionSetting": "combineComponents",
+                "list": {
+                    "sublists": [
+                        {
+                            "listKey": "Georgia",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Georgia",
+                                        "Lelos",
+                                        "equipo georgiano"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Samoa",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Samoa",
+                                        "Manu Samoa",
+                                        "selección samoana"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Fiji",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Fiji",
+                                        "Flying Fijians",
+                                        "equipo de Fiji"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Japón",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Japón",
+                                        "Cherry Blossoms",
+                                        "equipo japonés"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Italia",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Italia",
+                                        "Azzurri",
+                                        "selección italiana"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Escocia",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Escocia",
+                                        "Scottish Rugby",
+                                        "equipo escocés"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Gales",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Gales",
+                                        "Dragones Rojos",
+                                        "equipo galés"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Irlanda",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Irlanda",
+                                        "Irish Rugby",
+                                        "equipo irlandés"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Argentina",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Argentina",
+                                        "Los Pumas",
+                                        "selección argentina"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Sudáfrica",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Sudáfrica",
+                                        "Springboks",
+                                        "Boks"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Francia",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Francia",
+                                        "Les Bleus",
+                                        "equipo francés"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Inglaterra",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Inglaterra",
+                                        "Red Roses",
+                                        "selección inglesa"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Australia",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Australia",
+                                        "Wallabies",
+                                        "equipo australiano"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Nueva Zelanda",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Nueva Zelanda",
+                                        "All Blacks",
+                                        "NZ"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "regex": {
+                    "expressions": [
+                        {
+                            "regexKey": "rugby",
+                            "language": "es",
+                            "regexPattern": "(Nueva Zelanda|All Blacks|Australia|Wallabies|Inglaterra|Red Roses|Francia|Les Bleus|Sudáfrica|Springboks|Argentina|Los Pumas|Irlanda|Irish Rugby|Gales|Dragones Rojos|Escocia|Scottish Rugby|Italia|Azzurri|Japón|Cherry Blossoms|Fiji|Flying Fijians|Samoa|Manu Samoa|Georgia|Lelos)"
+                        }
+                    ]
+                }
+            },
+            {
+                "category": "noticias",
+                "compositionSetting": "combineComponents",
+                "list": {
+                    "sublists": [
+                        {
+                            "listKey": "Calendario",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Calendario",
+                                        "Fechas",
+                                        "programación de partidos"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Resultados",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Resultados",
+                                        "Marcadores",
+                                        "puntuaciones",
+                                        "estadísticas"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Jugador",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Jugador",
+                                        "Atleta",
+                                        "deportista",
+                                        "estrella del rugby"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Equipos",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Equipos",
+                                        "Selecciones",
+                                        "conjuntos",
+                                        "escuadras"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "listKey": "Partidos",
+                            "synonyms": [
+                                {
+                                    "language": "es",
+                                    "values": [
+                                        "Partidos",
+                                        "Juegos",
+                                        "encuentros",
+                                        "enfrentamientos"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "regex": {
+                    "expressions": [
+                        {
+                            "regexKey": "noticias",
+                            "language": "es",
+                            "regexPattern": "(partidos|juegos|equipos|jugador|resultados|estadísticas|calendario|fechas|programación de partidos)"
+                        }
+                    ]
+                }
+            }
+        ],
+        "utterances": [
+            {
+                "text": "¿Hay museos interesantes en Newcastle?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " Restaurantes con vista al mar en Newcastle.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde puedo encontrar playas en Newcastle?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Lugares turísticos imperdibles en Newcastle.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " ¿Qué puedo hacer en Newcastle?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde puedo ver los resultados de Georgia en el Mundial?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son los próximos encuentros de Samoa?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuál es la plantilla de Fiji?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Noticias sobre el equipo de Japón.",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuántos puntos tiene Italia en la clasificación?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuántas veces ha ganado Escocia el torneo?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué partidos tiene Gales esta semana?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo le ha ido a Irlanda en la fase de grupos?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Información sobre el equipo de Argentina.",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿En qué grupo está Sudáfrica?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son las estadísticas de Francia en la copa?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo está el desempeño de Inglaterra en el torneo?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Últimas noticias sobre la selección de Australia.",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Quiénes son los jugadores clave de Nueva Zelanda?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son los equipos clasificados para la Rugby World Cup 2027?",
+                "language": "es",
+                "intent": "Equipos Participantes",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Restaurantes de comida típica en Townsville.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde puedo hacer snorkel en Townsville?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Lugares turísticos en Townsville.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " Recomendaciones de hoteles en Townsville.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué actividades al aire libre hay en Townsville?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo es la vida nocturna en Adelaida?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " Museos recomendados en Adelaida.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde puedo ver vida silvestre en Adelaida?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Principales atracciones turísticas de Adelaida.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " ¿Qué visitar en Adelaida si me gusta el vino?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde están las mejores playas en Perth?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Restaurantes con vista al mar en Perth.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Hay tours en bicicleta en Perth?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Lugares históricos para conocer en Perth.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Turismo en Perth: ¿qué no me puedo perder?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué puedo visitar en Brisbane con niños?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Quiero hacer un recorrido cultural en Brisbane.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde ver koalas en Brisbane?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " ¿Cuáles son los mejores parques de Brisbane?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " Recomendaciones de lugares turísticos en Brisbane.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Rutas de turismo en Melbourne.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " ¿Dónde comer en Melbourne?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Lugares icónicos para visitar en Melbourne.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Hay galerías de arte en Melbourne?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": " ¿Qué hacer en Melbourne en un día?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde puedo hacer un tour en Sídney?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Restaurantes famosos en Sídney.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son las mejores playas de Sídney?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "Lugares turísticos recomendados en Sídney.",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué puedo visitar en Sídney?",
+                "language": "es",
+                "intent": "Turismo en la Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuál es la capacidad de los estadios en las ciudades sede?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Se podrá asistir a los partidos en todas las sedes?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde está ubicado el estadio más grande del torneo?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuántos estadios se usarán en la Copa del Mundo de Rugby?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Habrá ciudades adicionales como sedes de entrenamiento?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo fueron elegidas las sedes de la Rugby World Cup 2027?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué ciudad albergará más partidos del torneo?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Se jugarán partidos en Brisbane?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Habrá partidos en Sídney y Melbourne?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son las características principales de cada sede?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿En qué ciudad se jugará la final del Mundial de Rugby?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuál es la sede principal del torneo?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuántas ciudades fueron seleccionadas como anfitrionas?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde se jugarán los partidos del Mundial de Rugby 2027?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son las ciudades sede de la Rugby World Cup 2027?",
+                "language": "es",
+                "intent": "Ciudades Anfitrionas",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuál es la fecha límite para definir los clasificados?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo afectó la clasificación el ranking mundial de rugby?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Dónde se jugarán los partidos de clasificación?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles fueron los equipos que participaron en la última fase de clasificación?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Hay torneos previos que determinen los clasificados?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo se asignan las plazas para América, Europa y Oceanía?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuál es el proceso de repechaje para el torneo?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Los campeones de ediciones pasadas clasifican automáticamente?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo funcionan las eliminatorias para el Mundial de Rugby?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuántos cupos hay disponibles en cada continente?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué países pueden aún clasificar a la Copa del Mundo de Rugby?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Qué selecciones ya están clasificadas para el mundial?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuántos equipos participan en el torneo y cómo se definen?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cuáles son los criterios de clasificación para el Mundial de Rugby 2027?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            },
+            {
+                "text": "¿Cómo se clasifican los equipos para la Rugby World Cup 2027?",
+                "language": "es",
+                "intent": "Clasificación al Mundial",
+                "entities": [],
+                "dataset": "Train"
+            }
+        ]
+    }
+}
